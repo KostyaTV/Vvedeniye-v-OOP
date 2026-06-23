@@ -1,0 +1,19 @@
+class Monster:
+    def __init__(self, name, power, hp):
+        self.name = name
+        self.power = power
+        self.hp = hp
+
+    def mutate(self, amount):
+        self.power += amount
+        print(f"{self.name} мутирует! Сила увеличена!")
+        print(f"⚔️: {self.power}")
+
+    def rest(self, amount):
+        self.hp += amount
+        print(f"{self.name} отдыхает в склепе! Здоровье восстановлено!")
+        print(f"❤️: {self.hp}")
+
+lyukan = Monster("Люкан", 15, 90)
+lyukan.mutate(5)
+lyukan.rest(10)
